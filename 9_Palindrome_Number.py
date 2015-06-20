@@ -12,9 +12,9 @@ class Solution:
             cur=x
             curN=N
             for i in range(N/2):
-                left=cur/int(pow(10,curN-1))
-                right=cur%10
-                cur=(cur-left*int(pow(10,curN-1)))/10
+                left=cur/int(pow(10,curN-1)) # take the left-most digit
+                right=cur%10                 # take the right-mos digit
+                cur=(cur-left*int(pow(10,curN-1)))/10 # take the number in the middle that is left
                 curN=curN-2
                 if left!=right:
                     return False
