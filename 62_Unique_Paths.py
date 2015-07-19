@@ -3,8 +3,7 @@ class Solution:
     # @param {integer} n
     # @return {integer}
     def uniquePaths(self, m, n):
-        row=n*[0]
-        M=[row]*m
+        M=[[0 for col in range(n+1)] for row in range(m+1)]
         for i in range(m):
             M[i][0]=1
         for i in range(n):
